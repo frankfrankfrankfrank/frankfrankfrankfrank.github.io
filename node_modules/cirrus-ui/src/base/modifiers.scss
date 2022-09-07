@@ -1,0 +1,82 @@
+@use '../internal' as *;
+
+/* A collection of modifiers that extend control styling */
+#{$button-selectors} {
+    &.btn--pilled {
+        border-radius: 6.25rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    /* btn--circle: contents must be placed inside child element */
+    &.btn--circle {
+        border-radius: 100%;
+        min-width: 60px;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            padding-top: 100%;
+        }
+
+        * {
+            display: inline;
+            max-width: 90%;
+            vertical-align: middle;
+            white-space: pre-wrap;
+        }
+    }
+}
+
+/* Input (primary text-based) controls apply to inputs */
+.input-control--pilled {
+    border-radius: 6.25rem !important;
+}
+
+/* Theme modifiers */
+
+/* GLOBAL THEME SELECTORS */
+/* v1 */
+
+@each $name, $color in $semantic-colors {
+    @if $color != null {
+        .bg-#{$name} {
+            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+        }
+
+        .text-#{$name} {
+            border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+        }
+    }
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.text-transparent {
+    border-color: transparent !important;
+    color: transparent !important;
+}
+
+/* v2 */
+
+@each $name, $palette in $v2Colors {
+    @each $level, $color in $palette {
+        @if $color != null {
+            .bg-#{$name}-#{$level} {
+                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+            }
+
+            .text-#{$name}-#{$level} {
+                border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            }
+        }
+    }
+}

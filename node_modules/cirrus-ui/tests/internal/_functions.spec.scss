@@ -1,0 +1,191 @@
+// _functions.scss unit tests
+@use '../test_base' as *;
+@use '../../src/internal/functions';
+
+/****************
+ * hex-to-rgb() *
+ ****************/
+@include describe('hex-to-rgb()') {
+    @include it('should return corresponding rgb color given a hex color') {
+        @include assert-equal(functions.hex-to-rgb(#fff), (255, 255, 255));
+    }
+}
+
+/****************
+ * delimitize() *
+ ****************/
+@include describe('hex-to-rgb()') {
+    @include it('should return a string surrounded by the delimiter "-"') {
+        @include assert-equal(functions.delimitize('opacity'), '-opacity-');
+    }
+}
+
+/******************
+ * string-split() *
+ ******************/
+@include describe('string-split()') {
+    @include it('should return input string split using delimiter ","') {
+        @include assert-equal(functions.string-split('apples,oranges,bananas', ','), ('apples' 'oranges' 'bananas'));
+    }
+    @include it('should return input string split using delimiter "123"') {
+        @include assert-equal(functions.string-split('abc123def', '123'), ('abc' 'def'));
+    }
+}
+
+/******************
+ * map-get-deep() *
+ ******************/
+@include describe('map-get-deep()') {
+    @include it('should return value for key "foo" which is nested 1 level deep') {
+        @include assert-equal(
+            functions.map-get-deep(
+                (
+                    foo: bar,
+                ),
+                'foo'
+            ),
+            'bar'
+        );
+    }
+    @include it('should return value for key "a.b.c" which is nested 2 levels deep') {
+        @include assert-equal(
+            functions.map-get-deep(
+                (
+                    a: (
+                        b: (
+                            c: 1,
+                        ),
+                    ),
+                ),
+                'a.b.c'
+            ),
+            1
+        );
+    }
+    @include it('should throw error if key does not exist') {
+        @include assert-equal(
+            functions.map-get-deep(
+                (
+                    a: (
+                        b: (
+                            c: 1,
+                        ),
+                    ),
+                ),
+                'a.d'
+            ),
+            build-true-error-string('map-get-strict()', 'ERROR: Specified key "d" does not exist in the mapping')
+        );
+    }
+}
+
+/******************
+ * map-get-strict() *
+ ******************/
+@include describe('map-get-strict()') {
+    @include it('should return value for key "foo"') {
+        @include assert-equal(
+            functions.map-get-strict(
+                (
+                    foo: bar,
+                ),
+                'foo'
+            ),
+            'bar'
+        );
+    }
+    @include it('should throw error if key does not exist') {
+        @include assert-equal(
+            functions.map-get-strict(
+                (
+                    foo: bar,
+                ),
+                'baz'
+            ),
+            build-true-error-string('map-get-strict()', 'ERROR: Specified key "baz" does not exist in the mapping')
+        );
+    }
+}
+
+/***********************
+ * get-with-extended() *
+ ***********************/
+@include describe('get-with-extend()') {
+    @include it('should return default settings for opacity if extend.opacity is empty.') {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: (
+                        0: 0,
+                        100: 1,
+                    ),
+                    extend: (
+                        opacity: (),
+                    ),
+                ),
+                opacity
+            ),
+            (
+                0: 0,
+                100: 1,
+            )
+        );
+    }
+    @include it(
+        'should return extended settings for opacity if config.opacity is set to null and extended settings is not null.'
+    ) {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: null,
+                    extend: (
+                        opacity: (
+                            50: 0.5,
+                        ),
+                    ),
+                ),
+                opacity
+            ),
+            (
+                50: 0.5,
+            )
+        );
+    }
+    @include it('should return merged original and extended settings if both are not null.') {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: (
+                        0: 0,
+                        100: 1,
+                    ),
+                    extend: (
+                        opacity: (
+                            50: 0.5,
+                        ),
+                    ),
+                ),
+                opacity
+            ),
+            (
+                0: 0,
+                50: 0.5,
+                100: 1,
+            )
+        );
+    }
+    @include it('should return empty list if original and extended are null and empty (default) respectively.') {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: null,
+                    extend: (
+                        opacity: (),
+                    ),
+                ),
+                opacity
+            ),
+            ()
+        );
+    }
+}

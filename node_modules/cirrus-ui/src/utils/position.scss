@@ -1,0 +1,10 @@
+@use '../internal' as *;
+
+$generate-utility: should-generate-classes($POSITION);
+
+@if $generate-utility {
+  $positions: static, fixed, absolute, relative, sticky;
+
+  // Comment here just for commit.
+  @include generate-classes-for-viewport($positions, 'position', $generate-viewports: #{get-viewport-flag($POSITION)});
+}
