@@ -5,51 +5,92 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
       <meta charset="UTF-8"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
+
+
       <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+      <link rel="stylesheet" href="style.css" type="text/css">
+
+<!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
-      <script src="https://kit.fontawesome.com/cac2bc9286.js" crossorigin="anonymous"></script>
+
+<!-- Icons -->
+      <script src="https://kit.fontawesome.com/cac2bc9286.js" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"></script>
+
+<!-- JS -->
       <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script>
    </head>
    <body>
-      <div class="header header-fixed unselectable header-animated">
-         <div class="header-brand">
-            <div class="nav-item no-hover">
-               <h6 class="title">Frank Stewart</h6>
+
+<!-- Header -->
+
+<div class="header header-fixed u-unselectable header-animated">
+    <div class="header-brand">
+        <div class="nav-item no-hover">
+            <a><h6 class="title">Frank Stewart</h6></a>
+        </div>
+        <div class="nav-item nav-btn" id="header-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="header-nav" id="header-menu">
+        <div class="nav-right">
+            <div class="nav-item active">
+                <a href="#">Leadership</a>
             </div>
-            <div class="nav-item nav-btn" id="header-btn"> <span></span> <span></span> <span></span> </div>
-         </div>
-         <div class="header-nav" id="header-menu">
-            <div class="nav-left">
-               <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
+            <div class="nav-item">
+                <a href="#">Research</a>
             </div>
-            <div class="nav-right">
-               <div class="nav-item has-sub toggle-hover" id="dropdown">
-                  <a class="nav-dropdown-link">Menu</a>
-                  <ul class="dropdown-menu dropdown-animated" role="menu">
-                     <li role="menu-item"><a href="index.html">UX Leadership</a></li>
-                     <li role="menu-item"><a href="#">Research</a></li>
-                     <li role="menu-item"><a href="#">Design Systems</a></li>
-                     <li role="menu-item"><a href="#">Resume</a></li>
-                  </ul>
-               </div>
+            <div class="nav-item">
+                <a href="#">Systems</a>
             </div>
-         </div>
+            <div class="nav-item">
+                <a href="#">Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Section -->
+<div class="bg-grey-100 min-h-100p">
+  <section>
+    <div class="hero fullscreen">
+      <div class="hero-body content-fluid">
+        <div class="row u-center">
+          <div class="col-6 u-center">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jgerfaec.json"  background="transparent"  speed="1"  class="hero-lottie" autoplay loop></lottie-player>
+          </div>
+          <div class="col-6">
+              <h1 class="headline-3 col-8">UX Leadership</h1>
+              <p class="lead col-8">My five year journey at EVERFI, from introducing UX principles to managing a full team.</p>
+              <button class="text-indigo-500 bg-indigo-100 btn-animated">Read more</button>
+          </div>
+        </div>
       </div>
-      <section class="section">
-         <div class="hero fullscreen">
-            <div class="hero-body">
-               <div class="content">
-                  <div class="text-center">
-                     <h1>UX Leadership</h1>
-                     <p1>My five year journey at EVERFI, from introducing UX principles to managing a full team.</p1>
-                     <div>
-                       <button class="btn-primary btn-animated">Read more<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-   </body>
+    </div>
+  </section>
+
+</div>
+
+<script>
+// Get all the nav-btns in the page
+let navBtns = document.querySelectorAll('.nav-btn');
+
+// Add an event handler for all nav-btns to enable the dropdown functionality
+navBtns.forEach(function (ele) {
+    ele.addEventListener('click', function() {
+        // Get the dropdown-menu associated with this nav button (insert the id of your menu)
+        let dropDownMenu = document.getElementById('header-menu');
+
+        // Toggle the nav-btn and the dropdown menu
+        ele.classList.toggle('active');
+        dropDownMenu.classList.toggle('active');
+    });
+});
+</script>
+
+  </body>
 </html>
