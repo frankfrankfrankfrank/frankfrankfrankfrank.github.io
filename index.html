@@ -11,86 +11,110 @@
       <link rel="stylesheet" href="style.css" type="text/css">
 
 <!-- Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;800&display=swap" rel="stylesheet">
 
 <!-- Icons -->
-      <script src="https://kit.fontawesome.com/cac2bc9286.js" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/cac2bc9286.js" crossorigin="anonymous"></script>
 
 <!-- JS -->
       <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script>
+      <script src="components/header-footer.js" type="text/javascript" defer></script>
    </head>
    <body>
 
 <!-- Header -->
-
-<div class="header header-fixed u-unselectable header-animated">
-    <div class="header-brand">
-        <div class="nav-item no-hover">
-            <a><h6 class="title">Frank Stewart</h6></a>
-        </div>
-        <div class="nav-item nav-btn" id="header-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <div class="header-nav" id="header-menu">
-        <div class="nav-right">
-            <div class="nav-item active">
-                <a href="#">Leadership</a>
-            </div>
-            <div class="nav-item">
-                <a href="#">Research</a>
-            </div>
-            <div class="nav-item">
-                <a href="#">Systems</a>
-            </div>
-            <div class="nav-item">
-                <a href="#">Resume</a>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="header"></div>
 
 <!-- Main Section -->
 <div class="bg-grey-100 min-h-100p">
+
+<!-- Hero Section -->
   <section>
-    <div class="hero fullscreen">
-      <div class="hero-body content-fluid">
-        <div class="row u-center">
-          <div class="col-6 u-center">
+    <div class="hero">
+      <div class="hero-body content-fluid py-2" style="margin-top:76px;">
+        <div class="row u-center py-0">
+          <div class="col-6 u-center px-0">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jgerfaec.json"  background="transparent"  speed="1"  class="hero-lottie" autoplay loop></lottie-player>
+            <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_kfa0ohef.json"  background="transparent"  speed="1"  class="hero-lottie" autoplay loop></lottie-player>
           </div>
-          <div class="col-6">
-              <h1 class="px-0 headline-3 col-8">UX Leadership</h1>
-              <p class="px-0 lead col-8">My five year journey at EVERFI, from introducing UX principles to managing a full team.</p>
-              <button class="text-indigo-500 bg-indigo-100 btn-animated">Read more</button>
+          <div class="col-6 px-0">
+              <h1 class="col-8 px-0 text-dark hero-header">Frank is a UX designer based in Washington, DC.</h1>
+              <p class="col-8 px-0 text-gray-700">I have experience managing teams, developing design systems that scale and sustain, and generating research findings that drive the product cycle.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Cards Section -->
+  <section class="px-3">
+  <div class="content u-gap-2 u-center">
+
+    <div class="card col-4 col-2-md bg-yellow-100">
+      <div class="card__container">
+
+        <img src="img/research.svg" alt="">
+
+      </div>
+      <div class="content">
+        <h2 class="card-title px-2">UX Research</h2>
+        <p class="px-2 my-0 text-sm">Generating UX Research to create accessible and intuitive experiences.</p>
+      </div>
+      <div class="card__action-bar px-2">
+        <a href="!#" class="u u-LR text-sm">How research shapes strategy</a>
+        <span class="icon subtitle" style="color: #1D49A7; font-size: 14px">
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </span>
+      </div>
+    </div>
+
+    <div class="card col-4 col-2-md bg-pink-100">
+      <div class="card__container">
+
+        <img src="img/systems.svg" alt="">
+
+    </div>
+    <div class="content">
+      <h2 class="card-title px-2">Design Systems</h2>
+      <p class="px-2 my-0 text-sm">Simple, clean & system-friendly design that exists in the code.</p>
+    </div>
+    <div class="card__action-bar px-2">
+      <a href="!#" class="u u-LR text-sm">Building Dev components</a>
+      <span class="icon subtitle" style="color: #1D49A7; font-size: 14px">
+          <i class="fa-solid fa-arrow-right-long"></i>
+      </span>
+    </div>
+    </div>
+
+    <div class="card col-4 col-2-md bg-green-100">
+      <div class="card__container">
+
+          <img src="img/leadership.svg" alt="">
+
+    </div>
+    <div class="content">
+      <h2 class="card-title px-2">Leadership</h2>
+      <p class="px-2 my-0 text-sm">Fostering a team culture that's supportive, innovative, and skillful.</p>
+    </div>
+    <div class="card__action-bar px-2">
+      <a href="!#" class="u u-LR text-sm">Management and mentorship</a>
+      <span class="icon subtitle" style="color: #1D49A7; font-size: 14px">
+          <i class="fa-solid fa-arrow-right-long"></i>
+      </span>
+    </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
 </div>
-
-<script>
-// Get all the nav-btns in the page
-let navBtns = document.querySelectorAll('.nav-btn');
-
-// Add an event handler for all nav-btns to enable the dropdown functionality
-navBtns.forEach(function (ele) {
-    ele.addEventListener('click', function() {
-        // Get the dropdown-menu associated with this nav button (insert the id of your menu)
-        let dropDownMenu = document.getElementById('header-menu');
-
-        // Toggle the nav-btn and the dropdown menu
-        ele.classList.toggle('active');
-        dropDownMenu.classList.toggle('active');
-    });
-});
-</script>
 
   </body>
 </html>
