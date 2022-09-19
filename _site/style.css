@@ -18,16 +18,14 @@ a {
   color:#1D49A7;
 }
 
-.hero-lottie {
-  width: 360px;
-  height: 360px;
+.level{
+    align-items:center;
+    justify-content:flex-start;
 }
 
-@media only screen and (min-width: 468px) {
-  .hero-lottie {
-    width: 100%;
-    height: 100%;
-  }
+.hero-lottie {
+  width: 100%;
+  height: 100%;
 }
 
 .hero-header {
@@ -89,54 +87,157 @@ div.nav-item a {
   color: #1D49A7;
 }
 
+.grab {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 .draggable {
-    background: #e0ffee;
-    border: 1px solid #57a57a;
-    width: 200px;
-    padding: 5px;
-    margin: 3px;
+  background: rgba(254,236,220,var(--bg-opacity));
+  border: 1px solid #dc4753;
+  border-radius: 40rem;
+  width: 100%;
+  height: 3rem;
+  text-align: left;
+  padding:1rem;
 }
 
 .drop-zone {
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    background: #eee;
-    border: 2px solid #000;
-    min-height: 36px;
+  width: 100%;
+  padding: 8px;
+  background: #eee;
+  border: 2px solid #000;
+  min-height: 4rem;
+}
+
+.drop-tag {
+
+}
+
+.icon-background {
+  color: #c0ffc0;
 }
 
 /* Dragged source element style */
 .dragged {
-    opacity: .6;
-    border-style: dashed;
+  opacity: .6;
+  border-style: dashed;
 }
 
 /* Drag feedback image style */
 .drag-feedback {
-    background: lightskyblue;
-    border: 1px solid dodgerblue;
+  background: lightskyblue;
+  border: 1px solid dodgerblue;
 }
 
 /* drop zone highlights */
 .active-zone {
-    background: #fffad6;
-    border: 2px solid #aaa479;
+  background: #fffad6;
+  border: 2px solid #aaa479;
 }
 
 .over-zone {
-    background: #ffc6c6;
-    border: 2px solid #931414;
+  background: #ffc6c6;
+  border: 2px solid #931414;
 }
 
-/* Style for text drag test area */
-.drag-text-test {
-    width: 300px;
-    margin: 10px;
+/* Breakout */
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: var(--btn-color);
+  color: var(--text-color);
+  border-radius: 5px;
 }
 
-.drag-text-test textarea {
-    width: 100%;
-    padding: 10px;
-    height: 36px;
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background: var(--btn-hover-color);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.rules-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--rules-bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(0);
+  user-select: none;
+}
+
+.rules h2 {
+  font-size: 47px;
+  user-select: text;
+}
+
+.rules p {
+  margin: 25px 0px;
+  user-select: text;
+}
+
+/* Jump Game */
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px; //game height - character height (200 - 50)
+}
+
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+.animate{
+    animation: jump 300ms linear;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px; //game height - character height - block height (200 - 50 - 20)
+    left: 480px; //game width - block width (500 - 20)
+    animation: block 1s infinite linear;
+}
+
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
 }
