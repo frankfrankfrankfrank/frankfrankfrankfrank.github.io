@@ -1,15 +1,27 @@
-<h1 class="title">Breakout!</h1>
-    <button id="rules-btn" class="btn rules-btn">Show Rules</button>
-    <div id="rules" class="rules">
-    <h2>How To Play:</h2>
-    <p>
-      Use your right and left keys to move the paddle to bounce the ball up
-      and break the blocks.
-    </p>
-    <p>If you miss the ball, your score and the blocks will reset.</p>
-    <button id="close-btn" class="btn">Close</button>
+<section class="mb-16">
+  <div class="row u-center grid grid-12">
+    <div class="col-8 px-0">
+
+      <h2 class="title">Breakout!</h2>
+      <div class="grid-c-4 grid-r-6">
+        <div class="grid-4">
+        <p class="font-extrabold">How To Play</p>
+        <p class="text-sm">
+          Use your right and left keys to move the paddle to bounce the ball up
+          and break the blocks.
+        </p>
+        <p class="text-sm">If you miss the ball, your score and the blocks will reset.</p>
+
+        </div>
+        <div class="grid-c-8 grid-r-3">
+
+        <canvas id="canvas" width="800" height="600"></canvas>
+
+        </div>
+    </div>
   </div>
-  <canvas id="canvas" width="800" height="600"></canvas>
+</section>
+
   <script>
 
     "use strict";
@@ -71,7 +83,7 @@
     function drawBall() {
       ctx.beginPath();
       ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-      ctx.fillStyle = ball.visible ? '#0095dd' : 'transparent';
+      ctx.fillStyle = ball.visible ? '#1D49A7' : 'transparent';
       ctx.fill();
       ctx.closePath();
     }
@@ -80,7 +92,7 @@
     function drawPaddle() {
       ctx.beginPath();
       ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
-      ctx.fillStyle = paddle.visible ? '#0095dd' : 'transparent';
+      ctx.fillStyle = paddle.visible ? '#1D49A7' : 'transparent';
       ctx.fill();
       ctx.closePath();
     }
@@ -88,6 +100,7 @@
     // Draw score on canvas
     function drawScore() {
       ctx.font = '20px Arial';
+      ctx.fillStyle = '#EB578D';
       ctx.fillText(`Score: ${score}`, canvas.width - 100, 30);
     }
 
@@ -97,7 +110,7 @@
         column.forEach(brick => {
           ctx.beginPath();
           ctx.rect(brick.x, brick.y, brick.w, brick.h);
-          ctx.fillStyle = brick.visible ? '#0095dd' : 'transparent';
+          ctx.fillStyle = brick.visible ? '#1D49A7' : 'transparent';
           ctx.fill();
           ctx.closePath();
         });

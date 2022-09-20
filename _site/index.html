@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html id="page">
-   <head>
-      <title>Frank Stewart</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-      <meta charset="UTF-8"/>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
+  <head>
+    <title>Frank Stewart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
 
 
-      <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
-      <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
 
-<!-- Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;800&display=swap" rel="stylesheet">
 
-<!-- Icons -->
-      <script src="https://kit.fontawesome.com/cac2bc9286.js" crossorigin="anonymous"></script>
+  <!-- Icons -->
+    <script src="https://kit.fontawesome.com/cac2bc9286.js" crossorigin="anonymous"></script>
 
-<!-- JS -->
-      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script>
-      <script src="components/draggableTouch.js"></script>
+  <!-- JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script>
+    <script src="components/draggableTouch.js"></script>
 
-      <script src="components/load-components.js" type="text/javascript" defer></script>
-   </head>
-   <body>
+    <script src="components/load-components.js" type="text/javascript" defer></script>
+  </head>
+  <body>
 
 <!-- Header -->
-<div id="header"></div>
+  <div id="header"></div>
 
 <!-- Main Section -->
-<div class="bg-grey-100 min-h-100p">
+  <div class="bg-grey-100 min-h-100p">
 
 <!-- Hero Section -->
   <section>
@@ -44,81 +44,39 @@
             <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_kfa0ohef.json"  background="transparent"  speed="1"  class="hero-lottie" autoplay loop></lottie-player>
           </div>
           <div class="col-6 px-0">
-              <h1 class="col-8 px-0 text-dark hero-header">Frank is a UX designer based in Washington, DC.</h1>
-              <p class="col-8 px-0 text-gray-700">I have experience managing teams, developing design systems that scale and sustain, and generating research findings that drive the product cycle.</p>
+              <h1 class="col-8 px-0 text-dark hero-header">Frank is a UX manager based in Washington, DC.</h1>
+              <p class="col-8 px-0 text-gray-700">I have experience managing teams, developing design systems with working code, and generating research findings that drive product cycles.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Drag and Drop Section -->
-  <section class="bg-purple-100 mb-16">
-
-      <div id="breakout" class="content u-gap-2 u-center py-16 px-3"></div>
-
-  </section>
-
   <!-- Cards Section -->
-  <section class="px-3 mb-12">
-  <div class="content u-gap-2 u-center">
+  <section class="bg-purple-100 mb-16-md">
+  	<div class="hero">
+  		<div class="hero-body content-fluid px-0 py-0 py-15-lg">
+  			<div class="row u-center py-0">
 
-    <div class="card col-xs-4 bg-yellow-100">
-      <div class="card__container">
+    <div id="cards" class="content u-gap-2 u-center py-16-lg px-3"></div>
 
-        <embed src="img/research.svg" alt="">
-
-      </div>
-      <div class="content">
-        <h2 class="card-title px-2">UX Research</h2>
-        <p class="px-2 my-0 text-sm">Generating UX Research to create accessible and intuitive experiences.</p>
-      </div>
-      <div class="card__action-bar px-2">
-        <a href="!#" class="u u-LR text-sm">How research shapes strategy</a>
-        <span class="icon subtitle" style="color: #1D49A7; font-size: 14px">
-            <i class="fa-solid fa-arrow-right-long"></i>
-        </span>
+        </div>
       </div>
     </div>
-
-    <div class="card col-xs-4 bg-pink-100">
-      <div class="card__container">
-
-        <img src="img/systems.svg" alt="">
-
-    </div>
-    <div class="content">
-      <h2 class="card-title px-2">Design Systems</h2>
-      <p class="px-2 my-0 text-sm">Simple, clean & system-friendly design that exists in the code.</p>
-    </div>
-    <div class="card__action-bar px-2">
-      <a href="!#" class="u u-LR text-sm">Building Dev components</a>
-      <span class="icon subtitle" style="color: #1D49A7; font-size: 14px">
-          <i class="fa-solid fa-arrow-right-long"></i>
-      </span>
-    </div>
-    </div>
-
-    <div class="card col-xs-4 bg-green-100">
-      <div class="card__container">
-
-          <img src="img/leadership.svg" alt="">
-
-    </div>
-    <div class="content">
-      <h2 class="card-title px-2">Leadership</h2>
-      <p class="px-2 my-0 text-sm">Fostering a team culture that's supportive, innovative, and skillful.</p>
-    </div>
-    <div class="card__action-bar px-2">
-      <a href="!#" class="u u-LR text-sm">Management and mentorship</a>
-      <span class="icon subtitle" style="color: #1D49A7; font-size: 14px">
-          <i class="fa-solid fa-arrow-right-long"></i>
-      </span>
-    </div>
-    </div>
-
-  </div>
   </section>
+
+<!-- Game Section -->
+<section class="mb-16-md">
+  <div class="hero">
+    <div class="hero-body content-fluid px-0 py-0 py-15-lg">
+      <div class="row u-center py-0">
+
+  <div id="breakout" class="content u-gap-2 u-center py-16-lg px-3"></div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <div id="footer"></div>
