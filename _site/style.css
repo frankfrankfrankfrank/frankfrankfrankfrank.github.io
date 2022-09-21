@@ -11,7 +11,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -67,6 +67,49 @@ a {
   border-top: 0px;
   padding-bottom: 1em;
   padding-top: 0em;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #d0e0ef;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #dee2e6;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .footer {
@@ -198,47 +241,4 @@ div.nav-item a {
 .rules p {
   margin: 25px 0px;
   user-select: text;
-}
-
-/* Jump Game */
-
-#game{
-    width: 500px;
-    height: 200px;
-    border: 1px solid black;
-    margin: auto;
-}
-
-#character{
-    width: 20px;
-    height: 50px;
-    background-color: red;
-    position: relative;
-    top: 150px; //game height - character height (200 - 50)
-}
-
-@keyframes jump{
-    0%{top: 150px;}
-    30%{top: 100px;}
-    70%{top: 100px;}
-    100%{top: 150px;}
-}
-
-.animate{
-    animation: jump 300ms linear;
-}
-
-#block{
-    width: 20px;
-    height: 20px;
-    background-color: blue;
-    position: relative;
-    top: 130px; //game height - character height - block height (200 - 50 - 20)
-    left: 480px; //game width - block width (500 - 20)
-    animation: block 1s infinite linear;
-}
-
-@keyframes block{
-    0%{left: 500px}
-    100%{left: -20px}
 }
