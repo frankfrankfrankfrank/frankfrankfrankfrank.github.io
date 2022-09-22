@@ -14,6 +14,16 @@ time, mark, audio, video {
 	font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 a {
   color:#1D49A7;
 }
@@ -41,7 +51,7 @@ a {
 }
 
 .card {
-  max-width: 400px;
+  max-width: 25rem;
   box-shadow: none;
   border: 3px solid #363636;
   border-radius: 5px;
