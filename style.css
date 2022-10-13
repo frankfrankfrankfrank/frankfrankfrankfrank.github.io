@@ -33,6 +33,20 @@ a {
     justify-content:flex-start;
 }
 
+.visible-mobile {
+  display: none !important;
+}
+
+@media (max-width: 489px) {
+  .visible-mobile {
+    display: inline !important;
+  }
+
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
 .hero-lottie {
   width: 100%;
   height: 100%;
