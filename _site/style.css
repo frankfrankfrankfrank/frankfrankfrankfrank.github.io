@@ -83,8 +83,8 @@ div.nav-item a {
 
 @media only screen and (min-width: 468px) and (max-width: 2000px) {
 	.hero-lottie {
-	  width: 80%;
-	  height: 80%;
+	  width: 72%;
+	  height: 72%;
 	}
 }
 
@@ -198,23 +198,23 @@ p.card-title {
 }
 
 /* Case Study Visuals */
-.cs-visual {
+.visuals {
 
 }
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
-	.cs-visual {
+	.visuals {
 		margin-left:-12rem;
 		margin-right:-12rem;
 	}
 }
 @media only screen and (min-width: 1200px) and (max-width: 1900px) {
-	.cs-visual {
+	.visuals {
 		margin-left:-16rem;
 		margin-right:-16rem;
 	}
 }
 @media only screen and (min-width: 1901px) and (max-width: 3000px) {
-	.cs-visual {
+	.visuals {
 		margin-left:-24rem;
 		margin-right:-24rem;
 	}
