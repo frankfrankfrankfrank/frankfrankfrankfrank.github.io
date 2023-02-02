@@ -1,5 +1,7 @@
 $(function(){
   $("#header").load("header.html");
+  $("#work").load("work.html");
+  $("#logos").load("logos.html");  
   $("#cards").load("cards.html");
   $("#studies").load("avap-cs.html");
   $("#contact").load("contact.html");
