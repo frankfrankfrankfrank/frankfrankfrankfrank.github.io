@@ -394,3 +394,27 @@ p.card-title {
     margin-left: 0;
 		width: fit-content;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .logo {
+    max-width: 20%;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+.logo-sxsw {
+    max-width: 10%;
+  }
+}
+
+@media only screen and (min-width: 468px) and (max-width: 2000px) {
+  .logo {
+    max-width: 10%;
+  }
+}
+
+@media only screen and (min-width: 468px) and (max-width: 2000px) {
+  .logo-sxsw {
+    max-width: 5%;
+  }
+}
