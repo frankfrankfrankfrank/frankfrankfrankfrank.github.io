@@ -25,31 +25,28 @@ html {
 }
 
 a {
-  color:rgba(26,86,219,var(--color-opacity));
+  color:rgba(164,202,254,var(--bg-opacity));
+  font-weight:500;
+}
+
+a:hover {
+  color:rgba(63,131,248,var(--bg-opacity));
+  font-weight:500;
+}
+
+.u::after {
+  background: rgba(63,131,248,var(--bg-opacity));
 }
 
 /* div.nav-item a {
   color:rgba(26,86,219,var(--color-opacity));
 } */
 
-.manila {
-	background-color: #F1E6DA;
-}
-
-.dark-manila {
-	background-color: #EEE1D3;
-}
-
-.light-manila {
-	background-color: #F9F5F0;
-}
-
 .header {
-	background-color: #F1E6DA;
 	box-shadow: none;
-	border-bottom: 2px #363636 solid;
-	--header-link-color:rgba(26,86,219,var(--color-opacity));
-	--header-link-color-hover:rgba(30,66,159,var(--bg-opacity));
+	border-bottom: 1px #FFFFFF solid;
+	--header-link-color:rgba(164,202,254,var(--bg-opacity));
+	--header-link-color-hover:rgba(63,131,248,var(--bg-opacity));
 }
 
 .level{
@@ -69,6 +66,10 @@ a {
   .hidden-mobile {
     display: none !important;
   }
+}
+
+.hero {
+  justify-content: center;
 }
 
 .hero-index {
@@ -100,10 +101,11 @@ a {
 /* Cards */
 
 .card {
-  max-width: 25rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: ;
+  box-shadow: none;
   border: none;
-  border-radius: .25rem;
+  border-radius: 4px;
+  max-height: 37rem;
 }
 
 @media only screen and (min-width: 468px) and (max-width: 1279px) {
@@ -119,23 +121,41 @@ a {
 
 h2.card-title {
   margin-bottom: .6rem;
+  font-weight: 500;
 }
 
 p.card-title {
 
 }
 
-.card-arrow {
-	color:rgba(26,86,219,var(--color-opacity));
-	font-size: 14px;
-}
-
 .leading-tight {
     line-height: 1.6!important;
 }
 
+.card img {
+  width: 80%;
+  margin: 0 auto;
+  margin-top:1rem;
+  margin-bottom:2rem;
+}
+
+.card img.scenario {
+  width: 16%;
+  margin: 0 auto;
+  margin-top:1rem;
+  margin-bottom:2rem;
+}
+
 .card .card-container, .card .card__container {
-  min-height: 0;
+
+}
+
+.smaller_card {
+  display: block;
+  position: relative;
+  height: 40%;
+  min-height: 0rem;
+  max-height: 4rem;
 }
 
 .card .action-bar, .card .card__action-bar {
@@ -262,7 +282,7 @@ p.card-title {
   z-index: -1;
   display: flex;
   opacity: 0.9;
-  filter: blur(1px);
+  filter: blur(0px);
   transform: translateY(1.2rem) scale(0.95);
   transition: transform 1.5s, opacity 1.5s, filter 0.5s;
   transition-delay: 0.4s;
@@ -271,7 +291,7 @@ p.card-title {
   z-index: -2;
   display: flex;
   opacity: 0.7;
-  filter: blur(2px);
+  filter: blur(0px);
   transform: translateY(2.4rem) scale(0.9);
   transition: transform 2s, opacity 2s, filter 1.5s;
   transition-delay: 0.5s;
@@ -280,7 +300,7 @@ p.card-title {
   z-index: -3;
   display: flex;
   opacity: 0.5;
-  filter: blur(3px);
+  filter: blur(0px);
   transform: translateY(3.6rem) scale(0.85);
   transition: transform 2.5s, opacity 2.5s, filter 2s;
   transition-delay: 0.7s;
@@ -289,7 +309,7 @@ p.card-title {
   z-index: -4;
   display: flex;
   opacity: 0;
-  filter: blur(1px);
+  filter: blur(0px);
   transform: translateY(5rem) scale(0.8);
   transition: transform 3s, opacity 3s, filter 2.5s;
   transition-delay: 0.8s;
@@ -397,24 +417,40 @@ p.card-title {
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
   .logo {
-    max-width: 20%;
-  }
-}
-
-@media only screen and (min-width: 0px) and (max-width: 768px) {
-.logo-sxsw {
-    max-width: 10%;
+    max-width: 100%;
   }
 }
 
 @media only screen and (min-width: 468px) and (max-width: 2000px) {
   .logo {
-    max-width: 10%;
+    max-width: 80%;
   }
 }
 
-@media only screen and (min-width: 468px) and (max-width: 2000px) {
-  .logo-sxsw {
-    max-width: 5%;
-  }
+.word-card {
+  max-width: 480px;
+}
+
+.work-title {
+  font-size: 1.5rem;
+}
+
+.headline {
+  font-size: 2rem;
+}
+
+.btn.outline {
+  border-radius: 2px;
+  font-family: 'Poppins', sans-serif;
+}
+
+a.btn.alternate.outline.btn-light.btn-animated {
+  background-color: transparent;
+  border-color: rgba(164,202,254,var(--bg-opacity));
+}
+
+a.btn.alternate.outline.btn-light.btn-animated:hover {
+  background-color: transparent;
+  color:rgba(246,249,252,var(--color-opacity));
+  border-color: rgba(63,131,248,var(--bg-opacity));
 }

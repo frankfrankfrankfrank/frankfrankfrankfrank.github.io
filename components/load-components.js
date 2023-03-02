@@ -1,9 +1,8 @@
 $(function(){
   $("#header").load("header.html");
-  $("#work").load("work.html");
+  $("#studies").load("studies.html");
   $("#logos").load("logos.html");  
-  $("#cards").load("cards.html");
-  $("#studies").load("avap-cs.html");
+  $("#value").load("value.html");
   $("#contact").load("contact.html");
   $("#survey").load("survey.html");
   $("#footer").load("footer.html");

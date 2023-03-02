@@ -1,59 +1,159 @@
-<!-- Card 1 -->
-<div class="card col-4 bg-orange-100 p-0 mb-0">
-  <div class="card__container">
+<!DOCTYPE html>
+<html id="page">
+  <head>
+    <title>Frank Stewart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
 
-    <img src="img/wordforce.png" alt="">
 
-  </div>
-  <div class="content">
-    <h2 class="text-dark card-title px-2">Word Force</h2>
-    <p class="text-gray-700 card-body px-2 my-0">Literacy games for kids.</p>
-    <p class="text-gray-700 px-2 my-0 text-sm"><span class="font-bold">Role:</span> UX Research</p>
-  </div>
-  <div class="card__action-bar px-2">
-    <a href="https://www.truistwordforce.com" target="_blank" class="u u-LR text-sm text-blue-700">Learn more</a>
-      <span class="icon subtitle card-arrow">
-        <i class="fa-solid fa-arrow-right-long"></i>
-      </span>
-  </div>
-</div>
+    <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
 
-<!-- Card 2 -->
-  <div class="card col-4 bg-orange-100 p-0 mb-0 mt-3 mt-0-lg">
-    <div class="card__container">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
 
-      <img src="img/avap.png" alt="">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/cac2bc9286.js" crossorigin="anonymous"></script>
 
-  </div>
-  <div class="content">
-    <h2 class="text-dark card-title px-2">Know the truth</h2>
-    <p class="text-gray-700 card-body px-2 my-0">Youth vaping prevention and resources.</p>
-    <p class="text-gray-700 px-2 my-0 text-sm"><span class="font-bold">Role:</span> UX Lead</p>
-  </div>
-  <div class="card__action-bar px-2">
-    <a href="https://truthinitiative.org/curriculum" target="_blank" class="u u-LR text-sm">Learn more</a>
-    <span class="icon subtitle card-arrow">
-      <i class="fa-solid fa-arrow-right-long"></i>
-    </span>
-  </div>
-  </div>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script>
+    <script src="components/load-components.js" type="text/javascript" defer></script>
+  </head>
+  <body>
 
-<!-- Card 3 -->
-  <div class="card col-4 bg-orange-100 p-0 mb-0 mt-3 mt-0-lg">
-    <div class="card__container">
+    <!-- Header -->
+    <div id="header"></div>
 
-        <img src="img/compassion.png" alt="">
+    <!-- Main Section -->
+    <div class="bg-black min-h-100p">  
 
-  </div>
-  <div class="content">
-    <h2 class="text-dark card-title px-2">Compassion Project</h2>
-    <p class="text-gray-700 card-body px-2 my-0">Teaching compassion as a strong skill.</p>
-    <p class="text-gray-700 px-2 my-0 text-sm"><span class="font-bold">Role:</span> UX Lead</p>
-  </div>
-  <div class="card__action-bar px-2">
-    <a href="https://thecompassionproject.com" target="_blank" class="u u-LR text-sm">Learn more</a>
-    <span class="icon subtitle card-arrow">
-      <i class="fa-solid fa-arrow-right-long"></i>
-    </span>
-  </div>
-  </div>
+      <section class="bg-black">
+        <div class="content-fluid m-0 px-0 pt-6 pt-12-md">
+          <div class="row u-center p-0 mt-6">
+
+            <div class="col-6 px-3 px-1-lg">
+              <h1 class="text-light px-0 mb-6 mb-12-lg">More than 20 years of research-driven design solutions.</h1>
+            </div>
+
+            <div class="col-10 px-3">
+              <div class="grid-sm grid-cols-6 u-gap-6">
+
+                <!-- Truth -->
+                <div class="grid-c-2 grid-r-12 mb-2 mb-0-lg">
+
+                  <img src="img/avap.png" alt="Marketing image from the anti-vaping course">
+
+                  <h2 class="text-light card-title px-0 mt-4">Know the truth</h2>
+
+                  <a href="avap.html" class="u u-LR text-sm p-0">Youth vaping prevention and resources &#8594;</a>
+
+                </div>
+
+                <!-- Mini-Projects -->
+                <div class="grid grid-c-2 grid-r-12 u-gap-2 mb-2 mb-0-lg">
+
+                  <div class="grid-c-12 grid-r-6 level p-6 bg-gray-900">
+                    <div>
+                    <h2 class="text-light work-title mb-1">Pearl Jam</h2>
+
+                    <a href="https://pearljam.com/vitalogy/carbon" target="_blank" class="u u-LR text-sm p-0">Interviews and photography for carbon mitigation project &#8594;</a>
+                  </div>
+                    
+                  </div>
+                  
+                  <div class="grid-c-12 grid-r-6 level p-6 bg-gray-900">
+                    <div>
+                    <h2 class="text-light work-title mb-1">African American Heritage Trail</h2>
+
+                    <a href="https://www.culturaltourismdc.org/portal/c/document_library/get_file?uuid=e9ded752-0908-42f5-9d30-e4b01555db39" target="_blank" class="u u-LR text-sm p-0">Research and signage for Capitol Hill and U Street Trails &#8594;</a>
+                  </div>
+                    
+                  </div>
+
+                </div>
+
+                <!-- Compassion -->
+                <div class="grid-c-2 grid-r-12 mb-2 mb-0-lg">
+
+                  <img src="img/compassion.png" alt="Marketing image from the anti-vaping course">
+
+                  <h2 class="text-light card-title px-0 mt-4">Compassion Project</h2>
+
+                  <a href="compassion.html" class="u u-LR text-sm p-0">Teaching compassion as a strong skill &#8594;</a>
+
+                </div>
+
+                <!-- Mini-Projects -->
+                <div class="grid grid-c-2 grid-r-12 u-gap-2 mb-2 mb-0-lg">
+
+                  <div class="grid-c-12 grid-r-6 level p-6 bg-gray-900">
+                    <div>
+                    <h2 class="text-light work-title mb-1">Paul McCartney</h2>
+
+                    <a href="https://variety.com/2007/music/markets-festivals/emi-to-release-mccartney-catalog-1117964877" target="_blank" class="u u-LR text-sm p-0">Strategy and frontend design to support EMI's 2007 digital catalog release &#8594;</a>
+                  </div>
+                    
+                  </div>
+                  
+                  <div class="grid-c-12 grid-r-6 level p-6 bg-gray-900">
+                    <div>
+                    <h2 class="text-light work-title mb-1">SXSW 2007</h2>
+
+                    <a href="https://www.sxsw.com/iconicmoments/2007" target="_blank" class="u u-LR text-sm p-0">Promotional websites for Amy Winehouse, The Walkmen, and Girl Talk &#8594;</a>
+                  </div>
+                    
+                  </div>
+
+                </div>
+
+                <!-- Stock Advisor -->
+                <div class="grid-c-2 grid-r-12 mb-2 mb-0-lg">
+                  <img src="img/advisor.png" alt="Screen from one of the games in the Word Force product">
+
+                  <h2 class="text-light card-title px-0 mt-4">Stock Advisor</h2>
+
+                  <a href="advisor.html" class="u u-LR text-sm p-0">Building an effecient and transparent payment screen &#8594;</a>
+                </div>            
+
+                <!-- Mini-Projects -->
+                <div class="grid grid-c-2 grid-r-12 u-gap-2">
+
+                  <div class="grid-c-12 grid-r-6 level p-6 bg-gray-900">
+                    <div>
+                    <h2 class="text-light work-title mb-1">Ben's Chili Bowl Visitor Center</h2>
+
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g28970-d6578871-Reviews-Greater_U_Street_Neighborhood_Visitor_Center-Washington_DC_District_of_Columbia.html" target="_blank" class="u u-LR text-sm p-0">Project management, research, and design &#8594;</a>
+                  </div>
+                    
+                  </div>
+                  
+                  <div class="grid-c-12 grid-r-6 level p-6 bg-gray-900">
+                    <div>
+                    <h2 class="text-light work-title mb-1">Starbucks</h2>
+
+                    <a href="https://www.conservation.org/corporate-engagements/starbucks" target="_blank" class="u u-LR text-sm p-0">Research and design for the shade-grown coffee project &#8594;</a>
+                  </div>
+                    
+                  </div>
+
+                </div>                  
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    <!-- Close Main Section -->
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+  </body>
+</html>
