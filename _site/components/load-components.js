@@ -1,0 +1,9 @@
+$(function(){
+  $("#header").load("header.html");
+  $("#studies").load("studies.html");
+  $("#logos").load("logos.html");  
+  $("#value").load("value.html");
+  $("#contact").load("contact.html");
+  $("#survey").load("survey.html");
+  $("#footer").load("footer.html");
+});
