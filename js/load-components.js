@@ -1,5 +1,6 @@
 $(function(){
   $("#header").load("header.html");
+  $("#tetris").load("tetris.html");
   $("#studies").load("studies.html");
   $("#logos").load("logos.html");  
   $("#value").load("value.html");

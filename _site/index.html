@@ -20,37 +20,48 @@
 
   <!-- JS -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script>
-    <script src="components/load-components.js" type="text/javascript" defer></script>
+    <script src="js/load-components.js" type="text/javascript" defer></script>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7TRYGPDQ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G7TRYGPDQ9');
+  </script>
   <body>
 
 <!-- Header -->
   <div id="header"></div>
 
 <!-- Main -->
-  <div class="bg-black min-h-100p">
+  <div class="bg-purple-200 min-h-100p">
 
 <!-- Hero -->
-  <section class="bg-black">
-    <div class="hero">
+  <section class="bg-purple-200" style="border-bottom: 1px solid black;">
+    <div class="hero col-sm-12 col-lg-8 px-3">
       <div class="hero-index content-fluid px-0 py-6 py-12-md">
         <div class="row u-center py-0">
-          <div class="col-6 u-center px-0 mb-0">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-            <lottie-player src="img/bird.json"  background="transparent"  speed="1"  class="hero-lottie" loop autoplay></lottie-player>
-          </div>
-          <div class="col-6 px-3">
-            <h1 class="col-10 text-light mt-3 px-0 mt-0-md mb-0">Hi, I'm Frank</h1>
-            <p class="col-10 text-light lead px-0 mt-1 mt-2-md mb-0">Using research to drive design people actually use &#8212; and enjoy!</p>
-          </div>
+          <h1 class="col-12 text-dark mt-3 px-0 mt-0-md mb-0" style="white-space: nowrap; overflow: hidden; position: relative; line-height: 4rem;">
+            <span>UX</span>
+            <div class="message">
+              <div class="word1">Architect</div>
+              <div class="word2">Researcher</div>
+              <div class="word3">Strategist</div>
+              <div class="word3">Designer</div>
+            </div>
+          </h1>
+          <h4 class="col-12 text-dark lead font-light px-0 mt-1">Inventive design solutions driven by research.</h4>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Case Studies -->
-  <section class="bg-black">
-    <div class="content-fluid m-0 px-0 pt-6 pt-12-md">
+  <!-- Studies -->
+  <section class="bg-purple-200">
+    <div class="content-fluid m-0 px-0 my-6 my-12-md">
       <div class="row u-center p-0">
 
         <div id="studies" class="col-sm-12 col-lg-8 px-3"></div>
@@ -61,7 +72,7 @@
 
   <!-- Logos -->
   <section class="bg-black">
-    <div class="content-fluid p-0 mx-0 mb-6 mb-12-md">
+    <div class="content-fluid p-0 mx-0">
       <div class="row u-center p-0">
 
         <div id="logos" class="col-sm-12 col-lg-8 px-3"></div>
@@ -71,7 +82,7 @@
   </section>
 
   <!-- Value Props -->
-  <section class="bg-black">
+  <section class="bg-purple-200">
     <div class="content-fluid p-0 mx-0 mb-6 mb-12-md">
       <div class="row u-center p-0">
 
@@ -82,7 +93,7 @@
   </section>
 
   <!-- Contact -->
-  <section class="bg-white">
+  <section class="bg-purple-100">
     <div class="hero">
       <div class="hero-body content-fluid px-0 py-8 py-16-md">
         <div class="row u-center py-0">

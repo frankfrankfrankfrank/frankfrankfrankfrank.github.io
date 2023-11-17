@@ -3036,7 +3036,7 @@ video.video-fullscreen{
     background-color:rgba(0,0,0,var(--bg-opacity))!important
 }
 .text-black{
-    border-color:rgba(0,0,0,var(--color-opacity))!important;
+    border-color:rgba(232,218,254,var(--color-opacity))!important;
     color:rgba(0,0,0,var(--color-opacity))!important
 }
 .bg-white{
