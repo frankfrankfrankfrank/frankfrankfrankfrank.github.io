@@ -104,7 +104,7 @@ a.btn.alternate.outline.btn-light.btn-animated:hover {
   position: absolute;
   padding-left: 0.5rem;
   left: 3.5rem;
-  animation: openclose 6s ease-in-out forwards;
+  -webkit-animation: openclose 6s ease-in-out forwards;
 }
 
 @media only screen and (min-width: 468px) and (max-width: 2000px) {
