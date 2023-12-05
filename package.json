@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bulma": "^0.9.4",
     "cirrus-ui": "^0.7.0-patch.1"
   }
 }

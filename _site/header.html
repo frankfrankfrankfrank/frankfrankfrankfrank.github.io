@@ -1,45 +1,9 @@
-<div class="header header-fixed u-unselectable header-animated p-3 m-0">
-    <div class="header-brand">
-        <div class="nav-item no-hover px-0">
-            <a href="index.html"><h6 class="title text-sm text-purple-600">Frank Stewart</h6></a>
-        </div>
-        <div class="nav-item nav-btn" id="header-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+<header>
+  <div id="nav" class="center">
+    <div id="inner">
+      <div class="child"><a href = '#!'>About<a></div>
+      <div class="child"><a href = '#!'>Work<a></div>
+      <div class="child"><a href = '#!'>Contact<a></div>
     </div>
-    <div class="header-nav text-sm" id="header-menu">
-        <div class="nav-right">
-            <div class="nav-item">
-                <a href="work.html">Work</a>
-            </div>
-            <div class="nav-item">
-                <a href="about.html">About</a>
-            </div>
-            <div class="nav-item">
-                <a href="mailto:franktstewart@gmail.com">Contact</a>
-            </div>
-<!--             <div class="nav-item">
-                <a href="about.html">About</a>
-            </div> -->
-        </div>
-    </div>
-</div>
-
-<script>
-// Get all the nav-btns in the page
-let navBtns = document.querySelectorAll('.nav-btn');
-
-// Add an event handler for all nav-btns to enable the dropdown functionality
-navBtns.forEach(function (ele) {
-    ele.addEventListener('click', function() {
-        // Get the dropdown-menu associated with this nav button (insert the id of your menu)
-        let dropDownMenu = document.getElementById('header-menu');
-
-        // Toggle the nav-btn and the dropdown menu
-        ele.classList.toggle('active');
-        dropDownMenu.classList.toggle('active');
-    });
-});
-</script>
+  </div>
+</header>
