@@ -51,13 +51,31 @@ a:hover::before {
   transform: scaleX(1);
 }
 
+/* Button */
+
+.button {
+  background-color: black;
+  border-color: black;
+  font-size: 1.4rem;
+  line-height: .2rem;
+  padding: 3rem;
+}
+.button.button-clear,
+.button.button-outline {
+  background-color: transparent;
+  color: black;
+}
+.button.button-clear {
+  border-color: transparent;
+}
+
 div.container {
-/*  padding: 12rem 2rem 2rem 2rem;*/
+
 }
 
 @media screen and (min-width: 50rem) {
   div.container {
-/*    padding: 20rem 4rem 2rem 4rem;*/
+
   }
 } 
 
@@ -65,7 +83,7 @@ div.container {
 
  header {
   width: 100%;
-  height:10vh;
+  height:64px;
   z-index: 999;
   position: fixed;
   background-color:#fff;
@@ -122,12 +140,12 @@ div.container {
   height: 100vh;
 }
 
-.hero h1 {
+h1.gilda.upper.mask {
   margin-top:10rem;
 }
 
 @media screen and (min-width: 50rem) {
-  .hero h1 {
+  h1.gilda.upper.mask {
     margin-top:16rem;
   }
 }
@@ -275,48 +293,39 @@ case-study-hero .parallax .five {
   z-index: 0;
 }
 
-main {
-  position: relative;
-  margin-bottom: 15vh;
-  padding: 2em 4em;
-  min-height: 85vh;
-  background-color: #e8f4f8;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+div.column.article-column {
+  padding: 0 3rem;
 }
-main .container {
-  font-size: 1rem;
-  color: #192a2e;
-}
-main .container pre {
-  padding: 1em;
-  border-radius: 0.25em;
-  background-color: rgba(25, 42, 46, 0.05);
-}
-main .container a {
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
-  border-bottom: 2px dashed;
-  color: #192a2e;
+
+@media screen and (min-width: 50rem) {
+  div.column.article-column {
+    padding: 0 24rem;
+  }
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
+  position: inherit;
   display: flex;
   min-height: 15vh;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  background-color: #192a2e;
-  color: #c6d9d3;
+  background-color: #fff;
+  color: #212121;
 }
-footer a {
-  padding-bottom: 0.25em;
-  text-decoration: none;
-  border-bottom: 1px dashed #c6d9d3;
-  color: #c6d9d3;
+
+footer p {
+  margin: 0;
+}
+
+/* Inner Pages */
+
+h1.gilda.upper {
+  margin-top:6rem;
+}
+
+@media screen and (min-width: 50rem) {
+  h1.gilda.upper {
+    margin-top:8rem;
+  }
 }

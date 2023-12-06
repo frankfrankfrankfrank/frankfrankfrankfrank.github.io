@@ -39,97 +39,98 @@
   <body>
 
 
-<case-study-hero>
-  <div class="overlay">
-    <div class="parallax">
-      <h1>Awesome<span>Parallax Scrolling</span></h1>
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
-      <div class="four"></div>
-      <div class="five"></div>
-    </div>
-  </div>
-</case-study-hero>
-<main>
-  <div class="container">
-    <p>Sapiente nihil quidem tempora unde nobis eum corrupti veniam perferendis numquam, minima officia beatae quisquam quas cumque voluptatem facilis! Tenetur, praesentium corporis rerum repellendus vero temporibus quia voluptates corrupti, aliquam.</p><a href="https://www.w3schools.com/cssref/pr_mix-blend-mode.asp" target="blank">CSS mix-blend-mode</a>
-    <pre>wrapper { 
-  background-color: ... ;
-}
- 
-text { 
-  color: ... ;
-  mix-blend-mode: ... ; 
-}</pre>
-    <p>Sint sequi consequuntur eaque, harum, est tempora dolorem ullam perferendis quia laudantium porro magni necessitatibus sit dicta quidem. Sint autem quidem recusandae, ipsam, dolorem saepe blanditiis dolor. Aliquid, voluptate, at.</p>
-    <p>Tempore placeat veritatis ad excepturi, quasi, consequatur fuga. Corporis suscipit at aut quaerat nostrum maxime amet ipsum illo qui. Voluptate aperiam nostrum natus voluptatem modi, hic aliquid tempora quisquam, itaque.</p>
-  </div>
-</main>
-<footer>
-  <p>Copyright &copy 2019 by <a href="https://twitter.com/andrejsharapov" target="_blank">@andrejsharapov</a></p>
-</footer>
+    <case-study-hero>
+      <div class="overlay">
+        <div class="parallax">
+          <h1>Case Study Title<span>Case Study</span></h1>
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+          <div class="four"></div>
+          <div class="five"></div>
+        </div>
+      </div>
+    </case-study-hero>
 
-<script>
+    <!-- Hero -->
+      <div class="container">  
+        <section class="inner-page">
+          <div class="row">
+            <div class="column article-column">
+              <h1 class="gilda upper">Section title</h1>
+              <p>But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+              </p>
+              <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+              <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammeled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
 
-  // for heading
+            </div>
+          </div>
+        </section>
+      </div>
 
-$(window).scroll(function() {
-  const 
-    a = $(this).scrollTop(),
-    b = 800;
-  $("h1").css({
-    backgroundPosition: "center " + a / 2 + "px" 
-  });
-  $(".parallax").css({ 
-    top: a / 1.6 + "px", 
-    opacity: 1 - a / b 
-  });
-});
+    <!-- Footer -->
+    <div id="footer"></div>
 
-// parallax scrolling
+    <script>
 
-document.addEventListener("scroll", () => {
-  const 
-    top = window.pageYOffset,
-    one = document.querySelector(".one"),
-    two = document.querySelector(".two"),
-    three = document.querySelector(".three"),
-    four = document.querySelector(".four"),
-    five = document.querySelector(".five");
+      // for heading
 
-  one.style.bottom = -(top * 0.1) + "px";
-  two.style.bottom = -(top * 0.2) + "px";
-  three.style.bottom = -(top * 0.3) + "px";
-  four.style.bottom = -(top * 0.4) + "px";
-  five.style.bottom = -(top * 0.5) + "px";
-});
+    $(window).scroll(function() {
+      const 
+        a = $(this).scrollTop(),
+        b = 800;
+      $("h1").css({
+        backgroundPosition: "center " + a / 2 + "px" 
+      });
+      $(".parallax").css({ 
+        top: a / 1.6 + "px", 
+        opacity: 1 - a / b 
+      });
+    });
 
-/*
-// mouse dependency
+    // parallax scrolling
 
-const currentX = '';
-const currentY = '';
-const movementConstant = 0.015;
-$(document).mousemove(function(e) {
-  if (currentX == '') currentX = e.pageX;
-  const xdiff = e.pageX - currentX;
-  currentX = e.pageX;
-  if (currentY == '') currentY = e.pageY;
-  const ydiff = e.pageY - currentY;
-  currentY = e.pageY;
-$('.parallax div').each(function(i, el) {
-    const movement = (i + 1) * (xdiff * movementConstant);
-    const movementy = (i + 1) * (ydiff * movementConstant);
-    const newX = $(el).position().left + movement;
-    const newY = $(el).position().top + movementy;
-    $(el).css('left', newX + 'px');
-    $(el).css('top', newY + 'px');
-  });
-});
-*/
+    document.addEventListener("scroll", () => {
+      const 
+        top = window.pageYOffset,
+        one = document.querySelector(".one"),
+        two = document.querySelector(".two"),
+        three = document.querySelector(".three"),
+        four = document.querySelector(".four"),
+        five = document.querySelector(".five");
 
-</script>
+      one.style.bottom = -(top * 0.1) + "px";
+      two.style.bottom = -(top * 0.2) + "px";
+      three.style.bottom = -(top * 0.3) + "px";
+      four.style.bottom = -(top * 0.4) + "px";
+      five.style.bottom = -(top * 0.5) + "px";
+    });
+
+    /*
+    // mouse dependency
+
+    const currentX = '';
+    const currentY = '';
+    const movementConstant = 0.015;
+    $(document).mousemove(function(e) {
+      if (currentX == '') currentX = e.pageX;
+      const xdiff = e.pageX - currentX;
+      currentX = e.pageX;
+      if (currentY == '') currentY = e.pageY;
+      const ydiff = e.pageY - currentY;
+      currentY = e.pageY;
+    $('.parallax div').each(function(i, el) {
+        const movement = (i + 1) * (xdiff * movementConstant);
+        const movementy = (i + 1) * (ydiff * movementConstant);
+        const newX = $(el).position().left + movement;
+        const newY = $(el).position().top + movementy;
+        $(el).css('left', newX + 'px');
+        $(el).css('top', newY + 'px');
+      });
+    });
+    */
+
+    </script>
       
   </body>
 </html>
