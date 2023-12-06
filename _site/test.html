@@ -38,104 +38,98 @@
   </script>
   <body>
 
-    <div class="page">
-      <section class="hero-image"></section>
-      <div class="hero-text-container">
-        <div class="hero-title">
-          <h1>iOS PARALLAX HERO</h1>
-          <p>CSS ONLY</p>
-          <p>Works on iPhones and iPads</p>
-        </div>
-      </div>
-      <section class="main">
-        <div class="article">
-          <!--article wrapper-->
-          <h2>How the parallax hero image works</h2>
-          <div class="columns">
-            <p>Many parallax sites do not work on iOS devices. This is usually because they are using <code>background-attachement: fixed</code> to achieve a stationary background image. Unfortunately iOS does not render <code>background-attachement: fixed</code>          for performance related reasons. Instead it treats is as a normal background image which moves with the rest of the content.</p>
 
-            <p>The trick I have used here is to place the hero image as a background to a div which has <code>position: fixed</code> which fixes the container, rather than the background image. The content (Usually the page title) would normally be contained inside the div with the background-attached image, but in this case the text is centred in a seperate div with the same size as the fixed hero image. By using viewport units (100vw 100vh) the whole hero element is made responsive.</p>
-            <hr>
-            <h3>Cicero</h3>
-            <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
-
-            <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one
-              who avoids a pain that produces no resultant pleasure?</p>
-            <img src="https://images.unsplash.com/photo-1531312267124-cd1f431feb1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80">
-
-            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;
-              and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
-
-            <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
-
-            <p>But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.</p>
-
-            <p>The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. But I must explain to you how all this mistaken idea ofdenouncing
-              pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.</p>
-          </div>
-          <h2>Pseudo-Parallax Sections</h2>
-          <div class="columns">
-            <p>Below is a parallax section works by revealing the same fixed image seen in the hero section. In a full parallax effect a new image would be revealed using <code>background-attachement: fixed</code> but again, iOS will not allow that, so this
-              is a good compromise.</p>
-            <hr>
-            <h3>Cicero continued...</h3>
-            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
-              of human happiness.</p>
-
-            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-
-            <br>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</br>
-              </br>
-              To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</br>
-              </br>
-              But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</br>
-            </br>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;
-              and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</br>
-              </br>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. Butin certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur... [more]</p>
-            <img src="https://images.unsplash.com/photo-1521571942430-b492dedbd302?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80">
-          </div>
-        </div>
-
-      </section>
-
-      <section class="parallax-text-container">
-        <div class="parallax-title">
-          <h1>2nd PARALLAX SECTION</h1>
-          <p>Works on iPhones and iPads</p>
-        </div>
+<header>
+  <div class="overlay">
+    <div class="parallax">
+      <h1>Awesome<span>Parallax Scrolling</span></h1>
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+      <div class="five"></div>
     </div>
-    <div class="footer">
-      <div class="footer-container">
-        <div class="card">
-          <h3>Info Box 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          <p>Aenean commodo ligula eget dolor.</p>
-          <p>Aenean massa.</p>
-          <p>Cum sociis natoque penatibus et magnis dis</p>
-        </div>
-        <div class="card">
-          <h3>Info Box 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          <p>Aenean commodo ligula eget dolor.</p>
-          <p>Aenean massa.</p>
-          <p>Cum sociis natoque penatibus et magnis dis</p>
-        </div>
-        <div class="card">
-          <h3>Info Box 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          <p>Aenean commodo ligula eget dolor.</p>
-          <p>Aenean massa.</p>
-          <p>Cum sociis natoque penatibus et magnis dis</p>
-        </div>
-        <div class="card">
-          <h3>Info Box 4</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-          <p>Aenean commodo ligula eget dolor.</p>
-          <p>Aenean massa.</p>
-          <p>Cum sociis natoque penatibus et magnis dis</p>
-        </div>
-      </div>
-    </div>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <p>Sapiente nihil quidem tempora unde nobis eum corrupti veniam perferendis numquam, minima officia beatae quisquam quas cumque voluptatem facilis! Tenetur, praesentium corporis rerum repellendus vero temporibus quia voluptates corrupti, aliquam.</p><a href="https://www.w3schools.com/cssref/pr_mix-blend-mode.asp" target="blank">CSS mix-blend-mode</a>
+    <pre>wrapper { 
+  background-color: ... ;
+}
+ 
+text { 
+  color: ... ;
+  mix-blend-mode: ... ; 
+}</pre>
+    <p>Sint sequi consequuntur eaque, harum, est tempora dolorem ullam perferendis quia laudantium porro magni necessitatibus sit dicta quidem. Sint autem quidem recusandae, ipsam, dolorem saepe blanditiis dolor. Aliquid, voluptate, at.</p>
+    <p>Tempore placeat veritatis ad excepturi, quasi, consequatur fuga. Corporis suscipit at aut quaerat nostrum maxime amet ipsum illo qui. Voluptate aperiam nostrum natus voluptatem modi, hic aliquid tempora quisquam, itaque.</p>
+  </div>
+</main>
+<footer>
+  <p>Copyright &copy 2019 by <a href="https://twitter.com/andrejsharapov" target="_blank">@andrejsharapov</a></p>
+</footer>
 
+<script>
+
+  // for heading
+
+$(window).scroll(function() {
+  const 
+    a = $(this).scrollTop(),
+    b = 800;
+  $("h1").css({
+    backgroundPosition: "center " + a / 2 + "px" 
+  });
+  $(".parallax").css({ 
+    top: a / 1.6 + "px", 
+    opacity: 1 - a / b 
+  });
+});
+
+// parallax scrolling
+
+document.addEventListener("scroll", () => {
+  const 
+    top = window.pageYOffset,
+    one = document.querySelector(".one"),
+    two = document.querySelector(".two"),
+    three = document.querySelector(".three"),
+    four = document.querySelector(".four"),
+    five = document.querySelector(".five");
+
+  one.style.bottom = -(top * 0.1) + "px";
+  two.style.bottom = -(top * 0.2) + "px";
+  three.style.bottom = -(top * 0.3) + "px";
+  four.style.bottom = -(top * 0.4) + "px";
+  five.style.bottom = -(top * 0.5) + "px";
+});
+
+/*
+// mouse dependency
+
+const currentX = '';
+const currentY = '';
+const movementConstant = 0.015;
+$(document).mousemove(function(e) {
+  if (currentX == '') currentX = e.pageX;
+  const xdiff = e.pageX - currentX;
+  currentX = e.pageX;
+  if (currentY == '') currentY = e.pageY;
+  const ydiff = e.pageY - currentY;
+  currentY = e.pageY;
+$('.parallax div').each(function(i, el) {
+    const movement = (i + 1) * (xdiff * movementConstant);
+    const movementy = (i + 1) * (ydiff * movementConstant);
+    const newX = $(el).position().left + movement;
+    const newY = $(el).position().top + movementy;
+    $(el).css('left', newX + 'px');
+    $(el).css('top', newY + 'px');
+  });
+});
+*/
+
+</script>
+      
   </body>
 </html>
