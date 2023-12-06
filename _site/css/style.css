@@ -202,7 +202,7 @@ vertical-align: text-top;
     background-position: center center;
 }
 
-header {
+case-study-hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -211,14 +211,14 @@ header {
   align-items: center;
   background-color: #c6d9d3;
 }
-header .overlay {
+case-study-hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-header .overlay h1 {
+case-study-hero .overlay h1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -232,19 +232,19 @@ header .overlay h1 {
   color: #142124;
   mix-blend-mode: overlay;
 }
-header .overlay h1 span {
+case-study-hero .overlay h1 span {
   margin-top: -2em;
   padding-top: 0.5em;
   display: block;
   letter-spacing: 5px;
   font-size: 1.25rem;
 }
-header .parallax {
+case-study-hero .parallax {
   position: relative;
   width: 100%;
   height: 100%;
 }
-header .parallax div {
+case-study-hero .parallax div {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -254,23 +254,23 @@ header .parallax div {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-header .parallax .one {
+case-study-hero .parallax .one {
   background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-1.svg");
   z-index: 4;
 }
-header .parallax .two {
+case-study-hero .parallax .two {
   background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-2.svg");
   z-index: 3;
 }
-header .parallax .three {
+case-study-hero .parallax .three {
   background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-3.svg");
   z-index: 2;
 }
-header .parallax .four {
+case-study-hero .parallax .four {
   background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-4.svg");
   z-index: 1;
 }
-header .parallax .five {
+case-study-hero .parallax .five {
   background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-5.svg");
   z-index: 0;
 }
