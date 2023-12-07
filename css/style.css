@@ -178,6 +178,13 @@ h1.gilda.upper.mask {
 
 /* Parallax */
 
+.parallax {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .block {
   width: 100%;
   height: 100vh;
@@ -211,6 +218,8 @@ h1.gilda.upper.mask {
   transform: translate(-50%,0);
   pointer-events: none
 }
+
+/* Case Study Parallax */
 
 case-study-hero {
   position: relative;
