@@ -55,25 +55,64 @@
 
   <!-- Case Studies -->
 
-  <section class="parallax g-img1">
-    <div>
-      <p>Youth vaping prevention</p>
+  <section>
+    <div class="block">
+      <img src="https://picsum.photos/1200/1000?random=1" data-speed="-1" class="img-parallax">
+        <h2>Youth vaping prevention</h2>
+        <a class="button" href="#">Case study</a>
+    </div>
+    <div class="block">
+      <img src="https://picsum.photos/1200/1000?random=5" data-speed="1" class="img-parallax">
+      <h2>Online payments made easy</h2>
+      <a class="button" href="#">Case study</a>
+    </div>
+    <div class="block">
+      <img src="https://picsum.photos/1200/1000?random=10" data-speed="-0.25" class="img-parallax">
+      <h2>Compassion in the classroom</h2>
       <a class="button" href="#">Case study</a>
     </div>
   </section>
-  <section class="parallax g-img2">
-    <div>
-      <p>Online payments made easy</p>
-      <a class="button" href="#">Case study</a>
-    </div>
 
-  </section>
-  <section class="parallax g-img3">
-    <div>
-      <p>Compassion in the classroom</p>
-      <a class="button" href="#">Case study</a>
-    </div>
-  </section>
+<!-- Parallax Script -->
+
+<script>
+$('.img-parallax').each(function(){
+  var img = $(this);
+  var imgParent = $(this).parent();
+  function parallaxImg () {
+    var speed = img.data('speed');
+    var imgY = imgParent.offset().top;
+    var winY = $(this).scrollTop();
+    var winH = $(this).height();
+    var parentH = imgParent.innerHeight();
+
+
+    // The next pixel to show on screen      
+    var winBottom = winY + winH;
+
+    // If block is shown on screen
+    if (winBottom > imgY && winY < imgY + parentH) {
+      // Number of pixels shown after block appear
+      var imgBottom = ((winBottom - imgY) * speed);
+      // Max number of pixels until block disappear
+      var imgTop = winH + parentH;
+      // Porcentage between start showing until disappearing
+      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+    }
+    img.css({
+      top: imgPercent + '%',
+      transform: 'translate(-50%, -' + imgPercent + '%)'
+    });
+  }
+  $(document).on({
+    scroll: function () {
+      parallaxImg();
+    }, ready: function () {
+      parallaxImg();
+    }
+  });
+});
+</script>
 
   <!-- Footer -->
   <div id="footer"></div>
