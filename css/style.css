@@ -184,6 +184,7 @@ h1.gilda.upper.mask {
   position: relative;
   overflow: hidden;
   text-align: center;
+  line-height: 100vh;
 }
 .block h2 {
   position: relative;
