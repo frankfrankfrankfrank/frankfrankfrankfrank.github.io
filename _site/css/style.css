@@ -90,10 +90,10 @@ div.container {
   font-size: 1.5rem;
 }
 
- #nav {
+#nav {
   float: none;
   overflow: hidden;
-  width: 300px;
+  width: 100%;
   position: absolute;
   left: 50%;
   margin-left: -150px
@@ -115,7 +115,6 @@ div.container {
     display: none;
   }
   header {
-    background-color:transparent;
     padding: 3rem;
     font-size: 2rem;
   }
@@ -128,16 +127,24 @@ div.container {
   }
 }
 
+/* Hero */
+
+.hero {
+  height: 60vh;
+}
+
+.hero h4 {
+  font-size: 3rem;
+  line-height:4rem;
+  font-weight: 200;
+}
+
 .gilda {
   font-family: 'Gilda', serif;
 }
 
 .upper {
   text-transform: uppercase;
-}
-
-.hero {
-  height: 100vh;
 }
 
 h1.gilda.upper.mask {
@@ -148,12 +155,6 @@ h1.gilda.upper.mask {
   h1.gilda.upper.mask {
     margin-top:16rem;
   }
-}
-
-.hero h4 {
-  font-size: 3rem;
-  line-height:4rem;
-  font-weight: 200;
 }
 
 /* Text Mask */
@@ -178,13 +179,6 @@ h1.gilda.upper.mask {
 
 /* Parallax */
 
-.parallax {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .block {
   width: 100%;
   height: 100vh;
@@ -196,11 +190,11 @@ h1.gilda.upper.mask {
 .block h2 {
   position: relative;
   display: block;
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4rem;
-  color: white;
+  color: #384F8C;
 }
 .block btn {
   position: relative;
@@ -210,13 +204,52 @@ h1.gilda.upper.mask {
   transform: translateY(-50%);
 }
 .img-parallax {
-  width: 100vmax;
+  height: 80%;
+  width: 80%;
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: -20%;
   left: 50%;
   transform: translate(-50%,0);
-  pointer-events: none
+  pointer-events: none;
+}
+
+@media screen and (min-width: 50rem) {
+
+  .block {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 100vh;
+  }
+  .block h2 {
+    position: relative;
+    display: block;
+    margin: 0 0 4rem 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    color: white;
+  }
+  .block btn {
+    position: relative;
+    display: block;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .img-parallax {
+    width: 100vmax;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    pointer-events: none
+  }
+
 }
 
 /* Case Study Parallax */
