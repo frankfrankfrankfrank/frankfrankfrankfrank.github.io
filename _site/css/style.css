@@ -232,6 +232,7 @@ h1.gilda.upper.mask {
   position: relative;
   display: block;
   margin: 0 0 .5rem 0;
+  padding:0 1.5rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.5rem;
@@ -272,6 +273,21 @@ h1.gilda.upper.mask {
 
   }
 
+}
+
+.vape {
+  background-color:;
+  z-index: -2;
+}
+
+.payment {
+  background-color: #dbedea;
+  z-index: -2;
+}
+
+.labels {
+  background-color: ;
+  z-index: -2;
 }
 
 /* Case Study Parallax */
