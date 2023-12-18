@@ -12,6 +12,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
 html {
@@ -23,6 +24,21 @@ html {
     scroll-behavior: auto;
   }
 }
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 26rem) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+  display: flex;
+}
+  }
+
+/* Text Links */
 
 a {
   position: relative;
@@ -54,11 +70,19 @@ a:hover::before {
 /* Button */
 
 .button {
-  background-color: black;
-  border-color: black;
-  font-size: 1.4rem;
-  line-height: .2rem;
-  padding: 3rem;
+
+  color: #fff;
+  background-color: #212121;
+  font-size: .875rem;
+  line-height: 0rem;
+  font-weight: 300;
+  padding: 2rem 1rem;
+  border: none;
+  outline: none;
+  text-transform: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
 .button.button-clear,
 .button.button-outline {
@@ -68,22 +92,21 @@ a:hover::before {
 .button.button-clear {
   border-color: transparent;
 }
-
-div.container {
-
+a.button::before {
+  height:0px;
 }
-
-@media screen and (min-width: 50rem) {
-  div.container {
-
-  }
-} 
+.button:hover {
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transform: translateY(-0px);
+  background-color: #000;
+}
 
  /* Header */
 
  header {
   width: 100%;
-  height:64px;
+  height:5rem;
   z-index: 999;
   position: fixed;
   background-color:#fff;
@@ -105,37 +128,54 @@ div.container {
 
 .child {
   float: left;
-  margin:2rem;
-  width:60px;
+  margin:0 1rem;
+  width:4rem;
   text-align: center;
+  line-height: 5rem;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 26rem) {
   .menu-nav-toggle {
     display: none;
   }
   header {
-    padding: 3rem;
-    font-size: 2rem;
+    padding-right: 2rem;
+    font-size: 1rem;
   }
    #nav {
     float: right;
     position: relative;
-    width: 300px;
+    width: 32rem;
     left: 0;
     margin-left: 0px
   }
+  .child {
+  float: left;
+  margin:0 2rem;
+  width:4rem;
+  text-align: center;
+  }
 }
+
+div.container {
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 26rem) {
+  div.container {
+width:68rem;
+  }
+} 
 
 /* Hero */
 
 .hero {
-  height: 60vh;
+  height: 80vh;
 }
 
-.hero h4 {
-  font-size: 3rem;
-  line-height:4rem;
+.hero p {
+  font-size: 1.75rem;
+  line-height:2.5rem;
   font-weight: 200;
 }
 
@@ -148,20 +188,21 @@ div.container {
 }
 
 h1.gilda.upper.mask {
-  margin-top:10rem;
+  margin-top:6rem;
+  margin-bottom:1.5rem;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 26rem) {
   h1.gilda.upper.mask {
-    margin-top:16rem;
+    margin-top:10rem;
   }
 }
 
 /* Text Mask */
 
 .mask {
-  font-size: 7rem;
-  line-height: 7rem;
+  font-size: 4.375rem;
+  line-height: 4.375rem;
   font-weight: 800;
   text-transform: uppercase;
   background: url("../img/floral.jpg") 0 0 / cover no-repeat;
@@ -170,10 +211,10 @@ h1.gilda.upper.mask {
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 26rem) {
   .mask {
-    font-size: 20rem;
-    line-height:20rem;
+    font-size: 12rem;
+    line-height:12rem;
   }
 } 
 
@@ -190,10 +231,10 @@ h1.gilda.upper.mask {
 .block h2 {
   position: relative;
   display: block;
-  margin: 0 0 2rem 0;
+  margin: 0 0 .5rem 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #384F8C;
 }
 .block btn {
@@ -214,40 +255,21 @@ h1.gilda.upper.mask {
   pointer-events: none;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 26rem) {
 
   .block {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    line-height: 100vh;
   }
   .block h2 {
-    position: relative;
-    display: block;
-    margin: 0 0 4rem 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    color: white;
+    font-size: 2.5rem;
+    margin: 0 0 3rem 0;
   }
   .block btn {
-    position: relative;
-    display: block;
-    margin: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
   .img-parallax {
+    height: 140%;
     width: 100vmax;
-    z-index: -1;
-    position: absolute;
     top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
-    pointer-events: none
+
   }
 
 }
@@ -333,7 +355,7 @@ div.column.article-column {
   padding: 0 3rem;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 26rem) {
   div.column.article-column {
     padding: 0 24rem;
   }
@@ -362,7 +384,7 @@ h1.gilda.upper {
   margin-top:6rem;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 26rem) {
   h1.gilda.upper {
     margin-top:8rem;
   }
