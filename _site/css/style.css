@@ -236,7 +236,7 @@ h1.gilda.upper.mask {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.5rem;
-  color: #384F8C;
+  color: #212121;
 }
 .block btn {
   position: relative;
@@ -246,8 +246,8 @@ h1.gilda.upper.mask {
   transform: translateY(-50%);
 }
 .img-parallax {
-  height: 80%;
-  width: 80%;
+  height: 112%;
+  width: 100vh;
   z-index: -1;
   position: absolute;
   top: -20%;
@@ -281,12 +281,12 @@ h1.gilda.upper.mask {
 }
 
 .payment {
-  background-color: #dbedea;
+  background-color:#b2f3f8;
   z-index: -2;
 }
 
 .labels {
-  background-color: ;
+  background-color:#59e4f0;
   z-index: -2;
 }
 
