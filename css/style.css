@@ -70,7 +70,6 @@ a:hover::before {
 /* Button */
 
 .button {
-
   color: #fff;
   background-color: #212121;
   font-size: .875rem;
@@ -246,8 +245,8 @@ h1.gilda.upper.mask {
   transform: translateY(-50%);
 }
 .img-parallax {
-  height: 112%;
-  width: 100vh;
+  height: 120%;
+  width: 120vh;
   z-index: -1;
   position: absolute;
   top: -20%;
@@ -267,8 +266,8 @@ h1.gilda.upper.mask {
   .block btn {
   }
   .img-parallax {
-    height: 140%;
-    width: 100vmax;
+    height: 120%;
+    width: 120vmax;
     top: 0;
 
   }
@@ -276,17 +275,16 @@ h1.gilda.upper.mask {
 }
 
 .vape {
-  background-color:;
   z-index: -2;
 }
 
 .payment {
-  background-color:#b2f3f8;
+  background-color:#48CAE4;
   z-index: -2;
 }
 
 .labels {
-  background-color:#59e4f0;
+  background-image: linear-gradient(#03045e, #FFF);
   z-index: -2;
 }
 
@@ -373,7 +371,7 @@ div.column.article-column {
 
 @media screen and (min-width: 26rem) {
   div.column.article-column {
-    padding: 0 24rem;
+    padding: 0 16rem;
   }
 }
 
@@ -398,6 +396,7 @@ footer p {
 
 h1.gilda.upper {
   margin-top:6rem;
+  letter-spacing: 0;
 }
 
 @media screen and (min-width: 26rem) {
