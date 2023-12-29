@@ -237,13 +237,6 @@ h1.gilda.upper.mask {
   font-size: 2.5rem;
   color: #212121;
 }
-.block btn {
-  position: relative;
-  display: block;
-  margin: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 .img-parallax {
   height: 120%;
   width: 120vh;
@@ -252,9 +245,30 @@ h1.gilda.upper.mask {
   top: -20%;
   left: 50%;
   transform: translate(-50%,0);
-  pointer-events: none;
 }
 
+.vid-parallax-desktop {
+  z-index: -1;
+  height: auto;
+  width: 120%;
+  object-fit: contain;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%,0);
+  overflow: hidden;
+}
+.vid-parallax-mobile {
+  z-index: -1;
+  height: auto;
+  width: 120%;
+  object-fit: cover;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%,0);
+  overflow: hidden;
+}
 @media screen and (min-width: 26rem) {
 
   .block {
@@ -263,7 +277,8 @@ h1.gilda.upper.mask {
     font-size: 2.5rem;
     margin: 0 0 3rem 0;
   }
-  .block btn {
+  .block .button {
+
   }
   .img-parallax {
     height: 120%;
@@ -275,29 +290,26 @@ h1.gilda.upper.mask {
 }
 
 .vape {
-  z-index: -2;
 }
 
 .payment {
-  background-color:#48CAE4;
-  z-index: -2;
+/*  background-color:#48CAE4;*/
 }
 
 .labels {
-  background-image: linear-gradient(#03045e, #FFF);
-  z-index: -2;
+/*  background-image: linear-gradient(#03045e, #FFF);*/
 }
 
 /* Case Study Parallax */
 
 case-study-hero {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c6d9d3;
+  background-color: #fff;
 }
 case-study-hero .overlay {
   position: absolute;
@@ -307,25 +319,20 @@ case-study-hero .overlay {
   height: 100%;
 }
 case-study-hero .overlay h1 {
+  font-family: 'Gilda', serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   margin: 0;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 9rem;
-  text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
-  color: #142124;
+  color:#000;
   mix-blend-mode: overlay;
-}
-case-study-hero .overlay h1 span {
-  margin-top: -2em;
-  padding-top: 0.5em;
-  display: block;
-  letter-spacing: 5px;
-  font-size: 1.25rem;
 }
 case-study-hero .parallax {
   position: relative;
@@ -337,30 +344,80 @@ case-study-hero .parallax div {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:80%;
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+@media screen and (min-width: 26rem) {
+
+  case-study-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  case-study-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  case-study-hero .overlay h1 {
+    font-family: 'Gilda', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
+    color:#000;
+    mix-blend-mode: overlay;
+  }
+  case-study-hero .parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  case-study-hero .parallax div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
 case-study-hero .parallax .one {
-  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-1.svg");
+  background-image: url("../img/vape-1.svg");
   z-index: 4;
 }
 case-study-hero .parallax .two {
-  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-2.svg");
+  background-image: url("../img/vape-2.svg");
   z-index: 3;
 }
 case-study-hero .parallax .three {
-  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-3.svg");
+  background-image: url("../img/vape-3.svg");
   z-index: 2;
 }
 case-study-hero .parallax .four {
-  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-4.svg");
+  background-image: url("../img/vape-4.svg");
   z-index: 1;
 }
-case-study-hero .parallax .five {
+/*case-study-hero .parallax .five {
   background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-5.svg");
-  z-index: 0;
+  z-index: 0;*/
 }
 
 /* Inner Page Columns */
